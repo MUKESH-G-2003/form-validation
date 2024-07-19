@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    font-family:cursive;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 2px solid;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+button{
+    margin: 10px 40%;
+    width: fit-content;
+    font-family:cursive;
+    display: flex;
+    background-color: skyblue;
+    border: 0;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.item{
+    margin: 5px 0px;
+    font-family:cursive;
+}
+
+button:hover{
+    background-color: brown;
+    color: white;
+}
+
+.item:focus{
+    background-color:grey;
+    color: white;
+    font-family:cursive;
+}
+
+span{
+    color: red;
+}
+
+textarea{
+    height: 60px;
+}

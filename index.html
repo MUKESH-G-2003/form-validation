@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formvalidation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>|Form Validation|</h1>
+        <form action="#" onsubmit="return validation()" name="form">
+            <label for="firstname" class="item">First Name <span>*</span></label>
+            <input type="text" class="item" name="fname" placeholder="enter firstname">
+            <label for="lastname" class="item">Last Name</label>
+            <input type="text" class="item" name="lname" placeholder="lastname it any">
+            <label for="city" class="item">City <span>*</span></label>
+            <input type="text" class="item" placeholder="city name" name="city">
+            <label for="phoneNo" class="item">Phone Number <span>*</span></label>
+            <input type="tel" class="item" placeholder="91+" name="pNo">
+            <label for="query" class="item">Enter your query</label>
+            <textarea name="text" placeholder="enter if any query..."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        function validation() {
+            let fname = document.forms["form"]["fname"].value;
+            let lastname = document.forms["form"]["lname"].value;
+            let city = document.forms["form"]["city"].value;
+            let pNo = document.forms["form"]["pNo"].value;
+
+            if (fname == "" || city == "" || pNo == ""||fname == null || city == null) {
+                alert("please enter the necessary details");
+                return false;
+            }
+            else if (pNo.length < 10 || pNo.length > 10) {
+                alert("invalid phone number");
+                return false;
+            }
+            else{
+                alert("successfully registered");
+            }
+        }
+    </script>
+</body>
+
+</html>
